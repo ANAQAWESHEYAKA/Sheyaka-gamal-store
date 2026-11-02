@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="شياكة وجمال وأناقة — ملابس النساء والرجال والأطفال">
+  <title>شياكة وجمال وأناقة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">شياكة <span>وجمال وأناقة</span></a>
+  <button class="cart-toggle" id="cartToggle">السلة <b id="cartCount">0</b></button>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">أناقتك تبدأ من هنا</p>
+      <h1>شياكة وجمال وأناقة</h1>
+      <p>اختيارات أنيقة للعائلة كلها، واحتشام يجمع الذوق والراحة.</p>
+      <a class="cta" href="#departments">تسوّق الأقسام</a>
+    </div>
+    <img src="assets/hero.png" alt="تصميم متجر شياكة وجمال وأناقة">
+  </section>
+
+  <section id="departments">
+    <h2>تسوّق حسب القسم</h2>
+    <div class="departments">
+      <a class="department" href="#products"><img src="assets/modesty.png" alt=""><strong>النساء — ملكات الاحتشام</strong><small>خمار وجوانتي، نقاب، إسدال، معصم</small></a>
+      <a class="department" href="#products"><img src="assets/family.png" alt=""><strong>الرجال</strong><small>بدل، قمصان، بناطيل، جاكتات</small></a>
+      <a class="department" href="#products"><img src="assets/family.png" alt=""><strong>الأطفال والعائلة</strong><small>اختيارات مريحة وأنيقة</small></a>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="section-head"><h2>منتجات مختارة</h2><span>أسعار تجريبية قابلة للتعديل</span></div>
+    <div class="products" id="productGrid"></div>
+  </section>
+
+  <section class="offer"><div><h2>عروض وخصومات الافتتاح</h2><p>تابع أحدث العروض — قيمة الخصم تظهر بوضوح قبل تأكيد الطلب.</p></div><span class="discount">خصومات مميزة</span></section>
+
+  <section class="checkout" id="checkout">
+    <h2>تسجيل الطلب</h2>
+    <p>أضف المنتجات للسلة ثم اكتب بيانات التوصيل. هذه النسخة تحفظ الطلبات على نفس الجهاز فقط.</p>
+    <form id="orderForm">
+      <input name="customer" placeholder="اسم العميل" required>
+      <input name="phone" placeholder="رقم الهاتف" inputmode="tel" required>
+      <textarea name="address" placeholder="عنوان التوصيل بالتفصيل" required></textarea>
+      <input name="coupon" placeholder="كود الخصم (اختياري)">
+      <button class="cta" type="submit">تسجيل الطلب</button>
+    </form>
+    <p id="orderResult" role="status"></p>
+  </section>
+</main>
+<aside class="cart" id="cartPanel" aria-label="سلة المشتريات">
+  <div class="cart-head"><h2>سلة المشتريات</h2><button id="closeCart" aria-label="إغلاق">×</button></div>
+  <div id="cartItems"></div><p class="total">الإجمالي: <b id="cartTotal">0</b> جنيه</p>
+  <a class="cta" href="#checkout" id="goCheckout">إتمام الطلب</a>
+</aside>
+<footer>© <span id="year"></span> شياكة وجمال وأناقة — جميع الحقوق محفوظة</footer>
+<script src="script.js"></script>
+</body>
+</html>
